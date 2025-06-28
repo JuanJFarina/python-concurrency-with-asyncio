@@ -4,6 +4,7 @@ from utils import delay
 
 async def main():
     long_task = asyncio.create_task(delay(10))
+    print(long_task)  # at this point, the task has a pending status
     seconds_elapsed = 0
 
     while not long_task.done():
@@ -13,9 +14,9 @@ async def main():
         if seconds_elapsed >= 5:
             long_task.cancel()
 
-    print(long_task)
+    print(long_task)  # at this point, the task has a cancelled status
     try:
-        await long_task
+        await long_task  # CancelledError is only thrown at an await statement
     except asyncio.CancelledError:
         print("Task was cancelled after 5 seconds.")
 
