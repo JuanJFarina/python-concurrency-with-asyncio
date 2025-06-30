@@ -20,10 +20,12 @@ async def main() -> None:
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    asyncio.run(main())  # this creates an event loop and runs a main coroutine
 
 # For running coroutines, you can use the await keyword. Await behaves in a
-# blocking manner, meaning it will wait for the coroutine to finish before executing the
-# next line of code. In this example, code is still executing sequentially.
+# blocking manner, meaning it will wait for the coroutine to finish before
+# executing the next line of code. In this example, code is still executing
+# sequentially.
 
-# Using await does not prevent the event loop from executing other scheduled tasks.
+# Using await does not prevent the event loop from executing other scheduled
+# tasks.
