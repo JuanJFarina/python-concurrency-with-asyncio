@@ -1,7 +1,7 @@
 import asyncio
 import requests
 
-from utils import async_timed
+from python_concurrency.utils import async_timed
 
 
 @async_timed

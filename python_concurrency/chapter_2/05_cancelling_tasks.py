@@ -1,5 +1,5 @@
 import asyncio
-from utils import delay
+from python_concurrency.utils import delay
 
 
 async def main():

@@ -1,6 +1,6 @@
 import asyncio
 import time
-from utils import delay
+from python_concurrency.utils import delay
 
 
 async def hello_every_second():
