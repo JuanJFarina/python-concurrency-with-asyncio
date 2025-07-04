@@ -36,6 +36,6 @@ class UserCounter(WebSocketEndpoint):
 
 app = Starlette(routes=[WebSocketRoute("/counter", UserCounter)])
 
-# If this app is run with 1 worker only, then the state will be shared, and all 
-# the sockets will know how many connnections there are.
-# If there are multiple workers, each will have a different state.
+# If this app is run with 1  process only, then the state will be shared, and 
+# all the sockets will know how many connnections there are. If there are 
+# multiple workers, each will have a different state.

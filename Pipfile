@@ -7,13 +7,13 @@ name = "pypi"
 aiohttp = "*"
 asyncpg = "*"
 flask = "*"
-psycopg = "*"
 uvicorn = "*"
-psycopg2 = "*"
 gunicorn = "*"
 locust = "*"
 starlette = "*"
 websockets = "*"
+fastapi = "*"
+psycopg = {extras = ["binary", "pool"], version = "*"}
 
 [dev-packages]
 

@@ -8,5 +8,5 @@ print("Python application is running on process:", os.getpid())
 print(f"Python is using a total of {threading.active_count()} threads")
 
 # every process has at least one main thread, and may have multiple 'worker' or 
-# 'background' threads
+# 'background' threads (the same names are usually used for processes as well)
 print("Current thread name is:", threading.current_thread().name)

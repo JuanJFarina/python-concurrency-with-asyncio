@@ -18,7 +18,7 @@
   make it raise a CancelledError while we await it. If we have time limits on how
   long a task should take, we can set timeouts on it by using asyncio.wait_for.
 - We've learned to avoid common issues that newcomers make when using asyncio.
-  The first is runnin CPU-bound code in coroutines. CPU-bound code will block the
+  The first is running CPU-bound code in coroutines. CPU-bound code will block the
   event loop from running other coroutines since we're still single-threaded. The
   second is blocking I/O, since we can't use normal libraries with asyncio, and
   you must use asyncio-specific ones that return coroutines. If your coroutine

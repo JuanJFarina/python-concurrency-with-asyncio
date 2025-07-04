@@ -6,6 +6,8 @@ import time
 def read_example():
     response = requests.get("https://www.google.com")
     print(response.status_code)
+    # [_ for _ in range(10_000_000)]
+    # print("CPU-bound operation completed")
 
 
 point_one = time.time()
@@ -40,3 +42,10 @@ print(f"Multi threaded execution: {point_three - point_two}")
 # operations, it does allow for multithreading in I/O-bound operations, which
 # are not directly managed by the GIL because they do not access python
 # objects, and thus benefit from multiple threads.
+
+# A lock is an OS-level feature that allows for threads to "lock" a section of 
+# the memory, thus not allowing other threads to touch it until the lock is
+# released. This state is called "unlocked".
+
+# Python's Global Interpreter Lock (GIL) is thus a manner for preventing 
+# python's memory from being accessed by multiple threads at the same time.
